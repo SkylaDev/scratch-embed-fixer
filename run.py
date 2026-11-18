@@ -25,7 +25,7 @@ async def embed_project(request: Request, project_id: str):
     try:
         async with httpx.AsyncClient(follow_redirects=False, timeout=5) as session:
             resp = await session.get(('https://api.scratch.mit.edu/projects/%s' % project_id),
-                                     headers={'User-Agent': 'ScratchEmbeds/1.0'})
+                                     headers={'User-Agent': 'ScratchEmbedFixer/1.0'})
     except httpx.TimeoutException:
         raise HTTPException(status_code=504, detail='Scratch API timeout')
     except httpx.RequestError:
