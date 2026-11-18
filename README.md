@@ -2,7 +2,12 @@
 ### Another one of my stupid ideas :3
 
 
-This is a very basic (practicly proof of concept) embed fixer for [scratch.mit.edu](https://scratch.mit.edu/). It simply takes a project URL similar to scratch and will return a viable embed for sites like Discord.
+This is a very basic (practicly proof of concept) embed fixer for [scratch.mit.edu](https://scratch.mit.edu/). It simply takes a URL similar to scratch and will return a viable embed for sites like Discord.
+
+Supported pages:
+* Projects `/projects/<PROJECT_ID>`
+* Studios `/studios/<STUDIO_ID>`
+* Users `/users/<USERNAME>`
 
 This is achieved via the Scratch public API to fetch basic project information from an ID, its then served as a blank redirect page with said data in [Open Graph protocol](https://ogp.me/) format tags, in theory this can be altered to use [oEmbed](https://oembed.com/) or Twitter Card metadata formats but I prefer to use OGP as it is wider supported and simpler overall.
 
